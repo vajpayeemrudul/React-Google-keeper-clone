@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
 
 function CreateArea(props) {
+
+  const[bool ,setBool]=useState(false);
+
   const [note, setNote] = useState({
     title: "",
     content: ""
@@ -26,23 +31,32 @@ function CreateArea(props) {
     event.preventDefault();
   }
 
+  function expand()
+  {
+    setBool(true);
+  }
+
   return (
     <div>
       <form className="create-note">
-        <input
+        {bool && <input
           name="title"
           onChange={handleChange}
           value={note.title}
           placeholder="Title"
-        />
+        />}
         <textarea
           name="content"
           onChange={handleChange}
+          onClick={expand}
           value={note.content}
           placeholder="Take a note..."
-          rows="3"
+          rows={bool ? 3:1}
         />
-        <button onClick={submitNote}>Add</button>
+      
+        <Fab onClick={submitNote}>
+             <AddIcon />
+        </Fab>
       </form>
     </div>
   );
