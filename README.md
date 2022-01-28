@@ -1,3 +1,4 @@
+
 # Google Keeper clone
 VISIT: https://googlekeeperclone.netlify.app/
 This is a clone of google keeper app. It is made using react and Material UI styled components. 
@@ -7,6 +8,7 @@ This application uses react hooks and state management to render the page accord
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![alt](https://github.com/vajpayeemrudul/React-Google-keeper-clone/blob/master/public/images/mrudul.png?raw=true)
 ## Available Scripts
 
 In the project directory, you can run:
